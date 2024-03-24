@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2024 Afterlife Project
+# Copyright (C) 2024 RisingOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -11,8 +11,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from tundra device
 $(call inherit-product, device/motorola/tundra/device.mk)
 
-# Inherit common Afterlife configurations
-$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
+# Inherit common Lineage OS configurations
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
@@ -32,28 +32,16 @@ BUILD_FINGERPRINT := motorola/tundra_g/tundra:11/T1SJ33.117-30-4/6a9b48:user/rel
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 
-# CoreGapps
-AFTERLIFE_GAPPS := true
-AFTERLIFE_CORE := true
-
-# Maintainer
-
-AFTERLIFE_MAINTAINER := Shivam_Ingale
-
-
-# FaceUnlock
-
-TARGET_FACE_UNLOCK_SUPPORTED := true
-
-# Blur
-
-TARGET_SUPPORTS_BLUR := true
-
-# Pixel charging
-
-USE_PIXEL_CHARGING := false
-
-# TouchGestures
-
-TARGET_SUPPORTS_TOUCHGESTURES := true
+# RisingOS Flags
+WITH_GMS := true
+TARGET_CORE_GMS := true
+TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_HAS_UDFPS := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_PREBUILT_PIXEL_LAUNCHER := false
+RISING_CHIPSET := SD888
+RISING_MAINTAINER := Shivam_Ingale
+TARGET_USE_PIXEL_FINGERPRINT := true
+TARGET_BUILD_APERTURE_CAMERA := true
 TARGET_BOOT_ANIMATION_RES := 1080
