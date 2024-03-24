@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2024 AfterLife Project
+# Copyright (C) 2024 RisingOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/afterlife_tundra.mk
+    $(LOCAL_DIR)/lineage_tundra.mk
 
 COMMON_LUNCH_CHOICES := \
-    afterlife_tundra-user \
-    afterlife_tundra-userdebug \
-    afterlife_tundra-eng
+    lineage_tundra-user \
+    lineage_tundra-userdebug \
+    lineage_tundra-eng
